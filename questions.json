@@ -1,154 +1,152 @@
-{
-  "questions": [
+[
     {
-      "question": "HTML là viết tắt của cụm từ nào?",
-      "options": [
-        "Hyper Transfer Markup Language",
-        "Hyper Text Markup Language",
-        "High Text Markup Language",
-        "Home Tool Markup Language"
-      ],
-      "answer": "Hyper Text Markup Language"
+        "question": "HTML là viết tắt của cụm từ nào?",
+        "answers": [
+            "Hyper Transfer Markup Language",
+            "Hyper Text Markup Language",
+            "High Text Markup Language",
+            "Home Tool Markup Language"
+        ],
+        "correct": "Hyper Text Markup Language"
     },
     {
-      "question": "Thẻ <h1> đến <h6> trong HTML được dùng để:",
-      "options": [
-        "Định dạng danh sách",
-        "Định dạng đoạn văn bản",
-        "Định dạng tiêu đề",
-        "Chèn hình ảnh"
-      ],
-      "answer": "Định dạng tiêu đề"
+        "question": "Thẻ <h1> đến <h6> trong HTML được dùng để:",
+        "answers": [
+            "Định dạng danh sách",
+            "Định dạng đoạn văn bản",
+            "Định dạng tiêu đề",
+            "Chèn hình ảnh"
+        ],
+        "correct": "Định dạng tiêu đề"
     },
     {
-      "question": "Trong HTML, thẻ nào dùng để tạo liên kết đến trang web khác?",
-      "options": [
-        "<link>",
-        "<a>",
-        "<href>",
-        "<url>"
-      ],
-      "answer": "<a>"
+        "question": "Trong HTML, thẻ nào dùng để tạo liên kết đến trang web khác?",
+        "answers": [
+            "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+        ],
+        "correct": "<a>"
     },
     {
-      "question": "Trong CSS, thuộc tính nào dùng để thay đổi màu nền của một phần tử?",
-      "options": [
-        "background-color",
-        "color",
-        "bgcolor",
-        "backcolor"
-      ],
-      "answer": "background-color"
+        "question": "Trong CSS, thuộc tính nào dùng để thay đổi màu nền của một phần tử?",
+        "answers": [
+            "background-color",
+            "color",
+            "bgcolor",
+            "backcolor"
+        ],
+        "correct": "background-color"
     },
     {
-      "question": "Định dạng nào sau đây giúp nội dung chữ in đậm trong HTML?",
-      "options": [
-        "<strong>",
-        "<b>",
-        "<bold>",
-        "Cả <strong> và <b> đúng"
-      ],
-      "answer": "Cả <strong> và <b> đúng"
+        "question": "Định dạng nào sau đây giúp nội dung chữ in đậm trong HTML?",
+        "answers": [
+            "<strong>",
+            "<b>",
+            "<bold>",
+            "Cả <strong> và <b> đúng"
+        ],
+        "correct": "Cả <strong> và <b> đúng"
     },
     {
-      "question": "Đâu là cách viết đúng để chèn một tệp CSS vào HTML?",
-      "options": [
-        "<style src=\"style.css\">",
-        "<link rel=\"stylesheet\" href=\"style.css\">",
-        "<css href=\"style.css\">",
-        "<stylesheet>style.css</stylesheet>"
-      ],
-      "answer": "<link rel=\"stylesheet\" href=\"style.css\">"
+        "question": "Đâu là cách viết đúng để chèn một tệp CSS vào HTML?",
+        "answers": [
+            "<style src=\"style.css\">",
+            "<link rel=\"stylesheet\" href=\"style.css\">",
+            "<css href=\"style.css\">",
+            "<stylesheet>style.css</stylesheet>"
+        ],
+        "correct": "<link rel=\"stylesheet\" href=\"style.css\">"
     },
     {
-      "question": "Thẻ nào được sử dụng để nhúng một đoạn mã JavaScript vào HTML?",
-      "options": [
-        "<js>",
-        "<javascript>",
-        "<script>",
-        "<code>"
-      ],
-      "answer": "<script>"
+        "question": "Thẻ nào được sử dụng để nhúng một đoạn mã JavaScript vào HTML?",
+        "answers": [
+            "<js>",
+            "<javascript>",
+            "<script>",
+            "<code>"
+        ],
+        "correct": "<script>"
     },
     {
-      "question": "Thuộc tính nào giúp thay đổi kiểu chữ trong CSS?",
-      "options": [
-        "font-family",
-        "font-style",
-        "text-type",
-        "text-decoration"
-      ],
-      "answer": "font-family"
+        "question": "Thuộc tính nào giúp thay đổi kiểu chữ trong CSS?",
+        "answers": [
+            "font-family",
+            "font-style",
+            "text-type",
+            "text-decoration"
+        ],
+        "correct": "font-family"
     },
     {
-      "question": "Để tạo một bảng trong HTML, thẻ nào được sử dụng?",
-      "options": [
-        "<table>",
-        "<tr>",
-        "<td>",
-        "Cả <table>, <tr> và <td> đều đúng"
-      ],
-      "answer": "Cả <table>, <tr> và <td> đều đúng"
+        "question": "Để tạo một bảng trong HTML, thẻ nào được sử dụng?",
+        "answers": [
+            "<table>",
+            "<tr>",
+            "<td>",
+            "Cả <table>, <tr> và <td> đều đúng"
+        ],
+        "correct": "Cả <table>, <tr> và <td> đều đúng"
     },
     {
-      "question": "CSS viết tắt của cụm từ nào?",
-      "options": [
-        "Computer Style Sheet",
-        "Creative Style System",
-        "Cascading Style Sheet",
-        "Central Styling System"
-      ],
-      "answer": "Cascading Style Sheet"
+        "question": "CSS viết tắt của cụm từ nào?",
+        "answers": [
+            "Computer Style Sheet",
+            "Creative Style System",
+            "Cascading Style Sheet",
+            "Central Styling System"
+        ],
+        "correct": "Cascading Style Sheet"
     },
     {
-      "question": "Thẻ nào được sử dụng để tạo dòng ngắt trong HTML?",
-      "options": [
-        "<break>",
-        "<br>",
-        "<lb>",
-        "<newline>"
-      ],
-      "answer": "<br>"
+        "question": "Thẻ nào được sử dụng để tạo dòng ngắt trong HTML?",
+        "answers": [
+            "<break>",
+            "<br>",
+            "<lb>",
+            "<newline>"
+        ],
+        "correct": "<br>"
     },
     {
-      "question": "Để căn giữa một phần tử theo chiều ngang trong CSS, thuộc tính nào được sử dụng?",
-      "options": [
-        "text-align",
-        "margin",
-        "padding",
-        "align-content"
-      ],
-      "answer": "margin"
+        "question": "Để căn giữa một phần tử theo chiều ngang trong CSS, thuộc tính nào được sử dụng?",
+        "answers": [
+            "text-align",
+            "margin",
+            "padding",
+            "align-content"
+        ],
+        "correct": "margin"
     },
     {
-      "question": "Trong HTML, thẻ nào dùng để hiển thị hình ảnh?",
-      "options": [
-        "<img>",
-        "<image>",
-        "<pic>",
-        "<photo>"
-      ],
-      "answer": "<img>"
+        "question": "Trong HTML, thẻ nào dùng để hiển thị hình ảnh?",
+        "answers": [
+            "<img>",
+            "<image>",
+            "<pic>",
+            "<photo>"
+        ],
+        "correct": "<img>"
     },
     {
-      "question": "Thẻ nào dùng để tạo một danh sách không có thứ tự?",
-      "options": [
-        "<ol>",
-        "<li>",
-        "<ul>",
-        "<list>"
-      ],
-      "answer": "<ul>"
+        "question": "Thẻ nào dùng để tạo một danh sách không có thứ tự?",
+        "answers": [
+            "<ol>",
+            "<li>",
+            "<ul>",
+            "<list>"
+        ],
+        "correct": "<ul>"
     },
     {
-      "question": "Thuộc tính nào trong CSS giúp làm tròn góc của một phần tử?",
-      "options": [
-        "corner-radius",
-        "border-radius",
-        "round-edge",
-        "border-corner"
-      ],
-      "answer": "border-radius"
+        "question": "Thuộc tính nào trong CSS giúp làm tròn góc của một phần tử?",
+        "answers": [
+            "corner-radius",
+            "border-radius",
+            "round-edge",
+            "border-corner"
+        ],
+        "correct": "border-radius"
     }
-  ]
-}
+]
