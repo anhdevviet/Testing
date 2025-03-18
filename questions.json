@@ -1,167 +1,202 @@
 [
-  {
-    "question": "HTML là viết tắt của gì?",
-    "answers": [
-      "Hyper Text Markup Language",
-      "Hyper Transfer Markup Language",
-      "High Text Markup Language",
-      "Hyper Tool Markup Language"
-    ],
-    "correct": "Hyper Text Markup Language"
-  },
-  {
-    "question": "CSS được sử dụng để làm gì trong việc tạo website?",
-    "answers": [
-      "Tạo cấu trúc trang web",
-      "Định dạng và trình bày trang web",
-      "Xử lý logic phía máy chủ",
-      "Quản lý cơ sở dữ liệu"
-    ],
-    "correct": "Định dạng và trình bày trang web"
-  },
-  {
-    "question": "Thuộc tính nào sau đây được sử dụng để đặt màu nền trong CSS?",
-    "answers": ["color", "background-color", "font-color", "text-color"],
-    "correct": "background-color"
-  },
-  {
-    "question": "Giá trị nào sau đây hợp lệ cho thuộc tính `font-size` trong CSS?",
-    "answers": ["20px", "red", "bold", "underline"],
-    "correct": "20px"
-  },
-  {
-    "question": "Thẻ `<h1>` trong HTML được sử dụng để làm gì?",
-    "answers": [
-      "Tạo đoạn văn bản",
-      "Định nghĩa tiêu đề cấp 1",
-      "Tạo danh sách",
-      "Chèn hình ảnh"
-    ],
-    "correct": "Định nghĩa tiêu đề cấp 1"
-  },
-  {
-    "question": "Thuộc tính `display: block;` trong CSS làm gì?",
-    "answers": [
-      "Ẩn phần tử",
-      "Hiển thị phần tử như một khối",
-      "Hiển thị phần tử trên cùng dòng",
-      "Xóa định dạng của phần tử"
-    ],
-    "correct": "Hiển thị phần tử như một khối"
-  },
-  {
-    "question": "Thẻ `<p>` trong HTML dùng để làm gì?",
-    "answers": ["Tạo tiêu đề", "Tạo đoạn văn bản", "Chèn liên kết", "Tạo bảng"],
-    "correct": "Tạo đoạn văn bản"
-  },
-  {
-    "question": "Thuộc tính `border-style` trong CSS có thể nhận giá trị nào sau đây?",
-    "answers": ["solid", "green", "20px", "italic"],
-    "correct": "solid"
-  },
-  {
-    "question": "Thanh điều hướng (navigation bar) thường được đặt ở đâu trên trang web?",
-    "answers": [
-      "Phần chân trang (footer)",
-      "Phần đầu trang (header)",
-      "Phần giữa trang",
-      "Phần bên phải"
-    ],
-    "correct": "Phần đầu trang (header)"
-  },
-  {
-    "question": "Thuộc tính `padding` trong CSS dùng để làm gì?",
-    "answers": [
-      "Đặt khoảng cách bên trong phần tử",
-      "Đặt khoảng cách bên ngoài phần tử",
-      "Định dạng chữ",
-      "Thay đổi màu nền"
-    ],
-    "correct": "Đặt khoảng cách bên trong phần tử"
-  },
-  {
-    "question": "Giá trị nào sau đây hợp lệ cho thuộc tính `color` trong CSS?",
-    "answers": ["20px", "red", "solid", "block"],
-    "correct": "red"
-  },
-  {
-    "question": "Thẻ `<div>` trong HTML được sử dụng để:",
-    "answers": [
-      "Chia nhỏ nội dung thành các khối",
-      "Tạo tiêu đề",
-      "Chèn hình ảnh",
-      "Tạo danh sách"
-    ],
-    "correct": "Chia nhỏ nội dung thành các khối"
-  },
-  {
-    "question": "Thuộc tính `margin` trong CSS làm gì?",
-    "answers": [
-      "Đặt khoảng cách bên trong phần tử",
-      "Đặt khoảng cách bên ngoài phần tử",
-      "Thay đổi kích thước chữ",
-      "Thay đổi màu viền"
-    ],
-    "correct": "Đặt khoảng cách bên ngoài phần tử"
-  },
-  {
-    "question": "Loại thanh điều hướng nào hiển thị các liên kết theo chiều dọc?",
-    "answers": [
-      "Thanh ngang (horizontal)",
-      "Thanh dọc (vertical)",
-      "Thanh thả xuống (dropdown)",
-      "Thanh toàn màn hình (full-screen)"
-    ],
-    "correct": "Thanh dọc (vertical)"
-  },
-  {
-    "question": "Thuộc tính `font-family` trong CSS dùng để làm gì?",
-    "answers": [
-      "Đặt màu chữ",
-      "Đặt kiểu chữ",
-      "Đặt kích thước chữ",
-      "Đặt độ đậm chữ"
-    ],
-    "correct": "Đặt kiểu chữ"
-  },
-  {
-    "question": "Thẻ `<a>` trong HTML dùng để tạo gì?",
-    "answers": ["Tiêu đề", "Liên kết (hyperlink)", "Đoạn văn", "Hình ảnh"],
-    "correct": "Liên kết (hyperlink)"
-  },
-  {
-    "question": "Giá trị `inline` của thuộc tính `display` trong CSS làm gì?",
-    "answers": [
-      "Hiển thị phần tử như một khối",
-      "Hiển thị phần tử trên cùng dòng",
-      "Ẩn phần tử",
-      "Thay đổi kích thước phần tử"
-    ],
-    "correct": "Hiển thị phần tử trên cùng dòng"
-  },
-  {
-    "question": "Phần nào của website thường chứa logo và thông tin liên hệ?",
-    "answers": ["Footer", "Header", "Content", "Sidebar"],
-    "correct": "Header"
-  },
-  {
-    "question": "Thuộc tính `text-align` trong CSS dùng để làm gì?",
-    "answers": [
-      "Căn chỉnh văn bản",
-      "Thay đổi màu văn bản",
-      "Thay đổi kiểu chữ",
-      "Thay đổi kích thước văn bản"
-    ],
-    "correct": "Căn chỉnh văn bản"
-  },
-  {
-    "question": "Loại thanh điều hướng nào mở rộng ra khi người dùng rê chuột hoặc nhấp vào?",
-    "answers": [
-      "Thanh tĩnh (static)",
-      "Thanh thả xuống (dropdown)",
-      "Thanh dọc (vertical)",
-      "Thanh toàn màn hình (full-screen)"
-    ],
-    "correct": "Thanh thả xuống (dropdown)"
-  }
+    {
+        "question": "Website thường được tạo bởi ngôn ngữ lập trình nào?",
+        "answers": [
+            "Hyper Text Markup Language",
+            "Hyper Transfer Markup Language",
+            "High Text Markup Language",
+            "Hyper Tool Markup Language"
+        ],
+        "correct": "Hyper Text Markup Language"
+    },
+    {
+        "question": "Chọn phần bị điều được?",
+        "answers": [
+            "Website cơ bản",
+            "Lập trình viên",
+            "Ngôn ngữ lập trình",
+            "Phần mềm trực tuyến"
+        ],
+        "correct": "Website cơ bản"
+    },
+    {
+        "question": "Người dùng không được tạo ra bởi ngôn ngữ nào khi lập trình cấp sinh bẳng?",
+        "answers": [
+            "Các công cụ tạo dịch chỉnh sửa website xuất âm hiệu và lập trình cấp sinh bẳng",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "correct": "Các công cụ tạo dịch chỉnh sửa website xuất âm hiệu và lập trình cấp sinh bẳng"
+    },
+    {
+        "question": "Phần mềm tạo website ngoại tuyến bao gồm:",
+        "answers": [
+            "Notepad",
+            "Dreamweaver",
+            "Wix",
+            "4"
+        ],
+        "correct": "4"
+    },
+    {
+        "question": "Phần mềm tạo website ngoại tuyến bao gồm bao gồm:",
+        "answers": [
+            "Notepad",
+            "Dreamweaver",
+            "3",
+            "Wix"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Phần mềm tạo website trực tuyến bao gồm:",
+        "answers": [
+            "Notepad",
+            "Dreamweaver",
+            "Wix",
+            "4"
+        ],
+        "correct": "4"
+    },
+    {
+        "question": "Phần mềm tạo website ngoại tuyến trực tuyến trên mạng không yêu cầu cài đặt trên máy tính:",
+        "answers": [
+            "Là phần mềm website ngoại tuyến được sử dụng trên mạng không yêu cầu cài đặt trên máy tính",
+            "Notepad",
+            "Dreamweaver",
+            "Mobirise"
+        ],
+        "correct": "Là phần mềm website ngoại tuyến được sử dụng trên mạng không yêu cầu cài đặt trên máy tính"
+    },
+    {
+        "question": "Phần mềm được sử dụng không trực tiếp trên mạng internet:",
+        "answers": [
+            "Mobirise",
+            "Wix",
+            "Weebly",
+            "Google Sites"
+        ],
+        "correct": "Mobirise"
+    },
+    {
+        "question": "Phần mềm nào sau đây không phải là website ngoại tuyến?",
+        "answers": [
+            "Notepad",
+            "Dreamweaver",
+            "Nicepage",
+            "Mobirise"
+        ],
+        "correct": "Nicepage"
+    },
+    {
+        "question": "Mobirise là:",
+        "answers": [
+            "Phần mềm ngoại tuyến có phí",
+            "Phần mềm trực tuyến miễn phí",
+            "Phần mềm ngoại tuyến miễn phí",
+            "Phần mềm trực tuyến có phí"
+        ],
+        "correct": "Phần mềm ngoại tuyến có phí"
+    },
+    {
+        "question": "Các trang web là tập tin được xây dựng bởi:",
+        "answers": [
+            "Ngôn ngữ CSS",
+            "Ngôn ngữ HTML",
+            "Ngôn ngữ JavaScript",
+            "Ngôn ngữ PHP"
+        ],
+        "correct": "Ngôn ngữ CSS"
+    },
+    {
+        "question": "Các trang web cơ bản có được viết bởi ngôn ngữ gì?",
+        "answers": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "correct": "HTML"
+    },
+    {
+        "question": "Chọn phấy biểu đúng:",
+        "answers": [
+            "Mỗi trang web có thể có số lượng web khác nhau",
+            "Mỗi trang web chỉ có một nội dung",
+            "Mỗi trang web không cần ngôn ngữ",
+            "Mỗi trang web đều giống nhau"
+        ],
+        "correct": "Mỗi trang web có thể có số lượng web khác nhau"
+    },
+    {
+        "question": "Những trang web chính của website là gì?",
+        "answers": [
+            "Trang chủ, trang chính, trang chi tiết",
+            "Trang chân, trang phụ, trang ẩn",
+            "Trang cuối, trang đầu, trang giữa",
+            "Trang tạm, trang cố định, trang động"
+        ],
+        "correct": "Trang chủ, trang chính, trang chi tiết"
+    },
+    {
+        "question": "Có vẻ bạn, mỗi website có máy trang web chính?",
+        "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct": "4"
+    },
+    {
+        "question": "Trang web đặt tiên khi truy cập website được gọi là gì?",
+        "answers": [
+            "Trang phụ",
+            "Trang chủ",
+            "Trang chi tiết",
+            "Trang cuối"
+        ],
+        "correct": "Trang chủ"
+    },
+    {
+        "question": "Trang web chứa các nội dung chính của website được gọi là gì?",
+        "answers": [
+            "Trang chính",
+            "Trang phụ",
+            "Trang liên kết",
+            "Trang điều hướng"
+        ],
+        "correct": "Trang chính"
+    },
+    {
+        "question": "Chuyển mục có ý nghĩa gì?",
+        "answers": [
+            "Không thể chuyển mục",
+            "Chuyển mục là thay đổi ngôn ngữ",
+            "Chuyển mục là xóa nội dung",
+            "Có thể có chuyển mục"
+        ],
+        "correct": "Có thể có chuyển mục"
+    },
+    {
+        "question": "Thương hiệu kê các mục nội dung phụ của website:",
+        "answers": [
+            "Thanh chân trang",
+            "Thanh giữa trang",
+            "Thư mục liệt kê các mục chi tiết của website",
+            "Thanh bên phải"
+        ],
+        "correct": "Thư mục liệt kê các mục chi tiết của website"
+    },
+    {
+        "question": "Phật bịu nào sau đây là dụng chính của website:",
+        "answers": [
+            "Hiển thị hình ảnh",
+            "Mỗi mục nội dung sẽ liên kết với một hoặc nhiều trang Web",
+            "Lưu trữ dữ liệu",
+            "Tạo hiệu ứng âm thanh"
+        ],
+        "correct": "Mỗi mục nội dung sẽ liên kết với một hoặc nhiều trang Web"
+    }
 ]
