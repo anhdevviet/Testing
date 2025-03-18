@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi Trắc Nghiệm</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f0f2f5;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        padding: 12px 20px;
+        margin: 10px 0;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      #start-btn {
+        background: #28a745;
+        color: white;
+      }
+      #start-btn:hover {
+        background: #218838;
+      }
+      #next-btn {
+        background: #007bff;
+        color: white;
+      }
+      #next-btn:hover {
+        background: #0056b3;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        padding: 12px;
+        margin: 8px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background: #f8f9fa;
+        transition: 0.3s;
+      }
+      li:hover {
+        background: #e9ecef;
+      }
+      .correct {
+        background: #28a745 !important;
+        color: white;
+        border-color: #218838;
+      }
+      .wrong {
+        background: #dc3545 !important;
+        color: white;
+        border-color: #c82333;
+      }
+      #result-container {
+        display: none;
+        text-align: left;
+      }
+      .question-block {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #f8f9fa;
+      }
+      .question-block ul {
+        margin-top: 10px;
+      }
+      .icon {
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="start-container">
+      <h1>Thi Trắc Nghiệm</h1>
+      <button id="start-btn" onclick="startQuiz()">Bắt đầu</button>
+    </div>
+
+    <div class="container" id="quiz-container" style="display: none">
+      <h2 id="question-text"></h2>
+      <ul id="answers-list"></ul>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div class="container" id="result-container"></div>
+
+    <script>
+      let questions = [],
+        currentIndex = 0,
+        score = 0,
+        answered = 0,
+        startTime,
+        timerInterval,
+        userAnswers = [];
+
+      async function startQuiz() {
+        try {
+          let response = await fetch("questions.json");
+          questions = await response.json();
+          questions = shuffleArray(questions);
+          startTime = new Date().getTime();
+          document.getElementById("start-container").style.display = "none";
+          document.getElementById("quiz-container").style.display = "block";
+          nextQuestion();
+        } catch (error) {
+          alert("Không thể tải câu hỏi!");
+        }
+      }
+
+      function nextQuestion() {
+        if (currentIndex >= questions.length) return endQuiz();
+        clearTimeout(timerInterval);
+
+        let q = questions[currentIndex];
+        document.getElementById("question-text").innerText = q.question;
+        let answersList = document.getElementById("answers-list");
+        answersList.innerHTML = "";
+
+        shuffleArray(q.answers).forEach((answer) => {
+          let li = document.createElement("li");
+          li.innerText = answer;
+          li.onclick = () => selectAnswer(answer, q.correct);
+          answersList.appendChild(li);
+        });
+
+        timerInterval = setTimeout(() => nextQuestion(), 90 * 1000);
+      }
+
+      function selectAnswer(userAnswer, correctAnswer) {
+        answered++;
+        userAnswers.push({
+          question: questions[currentIndex].question,
+          answers: questions[currentIndex].answers,
+          userAnswer,
+          correctAnswer,
+        });
+
+        if (userAnswer === correctAnswer) score++;
+        currentIndex++;
+        nextQuestion();
+      }
+
+      function endQuiz() {
+        clearTimeout(timerInterval);
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("result-container").style.display = "block";
+
+        let endTime = new Date().getTime();
+        let timeTaken = Math.floor((endTime - startTime) / 1000);
+        let completionRate = Math.floor((answered / questions.length) * 100);
+        let correctRate = Math.floor((score / questions.length) * 100);
+        let totalPoints = Math.floor((score / questions.length) * 10);
+
+        let resultHTML = `<h2>Kết Quả</h2>
+                <p><strong>Điểm:</strong> ${totalPoints}/10</p>
+                <p><strong>Thời gian hoàn thành:</strong> ${timeTaken} giây</p>
+                <p><strong>Tỉ lệ hoàn thành:</strong> ${completionRate}%</p>
+                <p><strong>Tỉ lệ làm đúng:</strong> ${correctRate}%</p>
+                <h3>Chi Tiết Câu Hỏi</h3>`;
+
+        userAnswers.forEach((item, index) => {
+          resultHTML += `<div class="question-block">
+                    <p><strong>Câu ${index + 1}: ${item.question}</strong></p>
+                    <ul>${item.answers
+                      .map((answer) => {
+                        let className = "",
+                          icon = "";
+                        if (answer === item.correctAnswer) {
+                          className = "correct";
+                          icon = "✅";
+                        }
+                        if (
+                          answer === item.userAnswer &&
+                          answer !== item.correctAnswer
+                        ) {
+                          className = "wrong";
+                          icon = "❌";
+                        }
+                        return `<li class="${className}">${answer} <span class="icon">${icon}</span></li>`;
+                      })
+                      .join("")}</ul>
+                </div>`;
+        });
+
+        resultHTML += `<button onclick="location.reload()">Làm lại</button>`;
+        document.getElementById("result-container").innerHTML = resultHTML;
+      }
+
+      function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+      }
+    </script>
+  </body>
+</html>

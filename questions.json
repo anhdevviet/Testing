@@ -1,0 +1,167 @@
+[
+  {
+    "question": "HTML là viết tắt của gì?",
+    "answers": [
+      "Hyper Text Markup Language",
+      "Hyper Transfer Markup Language",
+      "High Text Markup Language",
+      "Hyper Tool Markup Language"
+    ],
+    "correct": "Hyper Text Markup Language"
+  },
+  {
+    "question": "CSS được sử dụng để làm gì trong việc tạo website?",
+    "answers": [
+      "Tạo cấu trúc trang web",
+      "Định dạng và trình bày trang web",
+      "Xử lý logic phía máy chủ",
+      "Quản lý cơ sở dữ liệu"
+    ],
+    "correct": "Định dạng và trình bày trang web"
+  },
+  {
+    "question": "Thuộc tính nào sau đây được sử dụng để đặt màu nền trong CSS?",
+    "answers": ["color", "background-color", "font-color", "text-color"],
+    "correct": "background-color"
+  },
+  {
+    "question": "Giá trị nào sau đây hợp lệ cho thuộc tính `font-size` trong CSS?",
+    "answers": ["20px", "red", "bold", "underline"],
+    "correct": "20px"
+  },
+  {
+    "question": "Thẻ `<h1>` trong HTML được sử dụng để làm gì?",
+    "answers": [
+      "Tạo đoạn văn bản",
+      "Định nghĩa tiêu đề cấp 1",
+      "Tạo danh sách",
+      "Chèn hình ảnh"
+    ],
+    "correct": "Định nghĩa tiêu đề cấp 1"
+  },
+  {
+    "question": "Thuộc tính `display: block;` trong CSS làm gì?",
+    "answers": [
+      "Ẩn phần tử",
+      "Hiển thị phần tử như một khối",
+      "Hiển thị phần tử trên cùng dòng",
+      "Xóa định dạng của phần tử"
+    ],
+    "correct": "Hiển thị phần tử như một khối"
+  },
+  {
+    "question": "Thẻ `<p>` trong HTML dùng để làm gì?",
+    "answers": ["Tạo tiêu đề", "Tạo đoạn văn bản", "Chèn liên kết", "Tạo bảng"],
+    "correct": "Tạo đoạn văn bản"
+  },
+  {
+    "question": "Thuộc tính `border-style` trong CSS có thể nhận giá trị nào sau đây?",
+    "answers": ["solid", "green", "20px", "italic"],
+    "correct": "solid"
+  },
+  {
+    "question": "Thanh điều hướng (navigation bar) thường được đặt ở đâu trên trang web?",
+    "answers": [
+      "Phần chân trang (footer)",
+      "Phần đầu trang (header)",
+      "Phần giữa trang",
+      "Phần bên phải"
+    ],
+    "correct": "Phần đầu trang (header)"
+  },
+  {
+    "question": "Thuộc tính `padding` trong CSS dùng để làm gì?",
+    "answers": [
+      "Đặt khoảng cách bên trong phần tử",
+      "Đặt khoảng cách bên ngoài phần tử",
+      "Định dạng chữ",
+      "Thay đổi màu nền"
+    ],
+    "correct": "Đặt khoảng cách bên trong phần tử"
+  },
+  {
+    "question": "Giá trị nào sau đây hợp lệ cho thuộc tính `color` trong CSS?",
+    "answers": ["20px", "red", "solid", "block"],
+    "correct": "red"
+  },
+  {
+    "question": "Thẻ `<div>` trong HTML được sử dụng để:",
+    "answers": [
+      "Chia nhỏ nội dung thành các khối",
+      "Tạo tiêu đề",
+      "Chèn hình ảnh",
+      "Tạo danh sách"
+    ],
+    "correct": "Chia nhỏ nội dung thành các khối"
+  },
+  {
+    "question": "Thuộc tính `margin` trong CSS làm gì?",
+    "answers": [
+      "Đặt khoảng cách bên trong phần tử",
+      "Đặt khoảng cách bên ngoài phần tử",
+      "Thay đổi kích thước chữ",
+      "Thay đổi màu viền"
+    ],
+    "correct": "Đặt khoảng cách bên ngoài phần tử"
+  },
+  {
+    "question": "Loại thanh điều hướng nào hiển thị các liên kết theo chiều dọc?",
+    "answers": [
+      "Thanh ngang (horizontal)",
+      "Thanh dọc (vertical)",
+      "Thanh thả xuống (dropdown)",
+      "Thanh toàn màn hình (full-screen)"
+    ],
+    "correct": "Thanh dọc (vertical)"
+  },
+  {
+    "question": "Thuộc tính `font-family` trong CSS dùng để làm gì?",
+    "answers": [
+      "Đặt màu chữ",
+      "Đặt kiểu chữ",
+      "Đặt kích thước chữ",
+      "Đặt độ đậm chữ"
+    ],
+    "correct": "Đặt kiểu chữ"
+  },
+  {
+    "question": "Thẻ `<a>` trong HTML dùng để tạo gì?",
+    "answers": ["Tiêu đề", "Liên kết (hyperlink)", "Đoạn văn", "Hình ảnh"],
+    "correct": "Liên kết (hyperlink)"
+  },
+  {
+    "question": "Giá trị `inline` của thuộc tính `display` trong CSS làm gì?",
+    "answers": [
+      "Hiển thị phần tử như một khối",
+      "Hiển thị phần tử trên cùng dòng",
+      "Ẩn phần tử",
+      "Thay đổi kích thước phần tử"
+    ],
+    "correct": "Hiển thị phần tử trên cùng dòng"
+  },
+  {
+    "question": "Phần nào của website thường chứa logo và thông tin liên hệ?",
+    "answers": ["Footer", "Header", "Content", "Sidebar"],
+    "correct": "Header"
+  },
+  {
+    "question": "Thuộc tính `text-align` trong CSS dùng để làm gì?",
+    "answers": [
+      "Căn chỉnh văn bản",
+      "Thay đổi màu văn bản",
+      "Thay đổi kiểu chữ",
+      "Thay đổi kích thước văn bản"
+    ],
+    "correct": "Căn chỉnh văn bản"
+  },
+  {
+    "question": "Loại thanh điều hướng nào mở rộng ra khi người dùng rê chuột hoặc nhấp vào?",
+    "answers": [
+      "Thanh tĩnh (static)",
+      "Thanh thả xuống (dropdown)",
+      "Thanh dọc (vertical)",
+      "Thanh toàn màn hình (full-screen)"
+    ],
+    "correct": "Thanh thả xuống (dropdown)"
+  }
+]
