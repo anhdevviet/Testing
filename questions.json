@@ -1,202 +1,154 @@
-[
+{
+  "questions": [
     {
-        "question": "Website thường được tạo bởi ngôn ngữ lập trình nào?",
-        "answers": [
-            "Hyper Text Markup Language",
-            "Hyper Transfer Markup Language",
-            "High Text Markup Language",
-            "Hyper Tool Markup Language"
-        ],
-        "correct": "Hyper Text Markup Language"
+      "question": "HTML là viết tắt của cụm từ nào?",
+      "options": [
+        "Hyper Transfer Markup Language",
+        "Hyper Text Markup Language",
+        "High Text Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "answer": "Hyper Text Markup Language"
     },
     {
-        "question": "Chọn phần bị điều được?",
-        "answers": [
-            "Website cơ bản",
-            "Lập trình viên",
-            "Ngôn ngữ lập trình",
-            "Phần mềm trực tuyến"
-        ],
-        "correct": "Website cơ bản"
+      "question": "Thẻ <h1> đến <h6> trong HTML được dùng để:",
+      "options": [
+        "Định dạng danh sách",
+        "Định dạng đoạn văn bản",
+        "Định dạng tiêu đề",
+        "Chèn hình ảnh"
+      ],
+      "answer": "Định dạng tiêu đề"
     },
     {
-        "question": "Người dùng không được tạo ra bởi ngôn ngữ nào khi lập trình cấp sinh bẳng?",
-        "answers": [
-            "Các công cụ tạo dịch chỉnh sửa website xuất âm hiệu và lập trình cấp sinh bẳng",
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "correct": "Các công cụ tạo dịch chỉnh sửa website xuất âm hiệu và lập trình cấp sinh bẳng"
+      "question": "Trong HTML, thẻ nào dùng để tạo liên kết đến trang web khác?",
+      "options": [
+        "<link>",
+        "<a>",
+        "<href>",
+        "<url>"
+      ],
+      "answer": "<a>"
     },
     {
-        "question": "Phần mềm tạo website ngoại tuyến bao gồm:",
-        "answers": [
-            "Notepad",
-            "Dreamweaver",
-            "Wix",
-            "4"
-        ],
-        "correct": "4"
+      "question": "Trong CSS, thuộc tính nào dùng để thay đổi màu nền của một phần tử?",
+      "options": [
+        "background-color",
+        "color",
+        "bgcolor",
+        "backcolor"
+      ],
+      "answer": "background-color"
     },
     {
-        "question": "Phần mềm tạo website ngoại tuyến bao gồm bao gồm:",
-        "answers": [
-            "Notepad",
-            "Dreamweaver",
-            "3",
-            "Wix"
-        ],
-        "correct": "3"
+      "question": "Định dạng nào sau đây giúp nội dung chữ in đậm trong HTML?",
+      "options": [
+        "<strong>",
+        "<b>",
+        "<bold>",
+        "Cả <strong> và <b> đúng"
+      ],
+      "answer": "Cả <strong> và <b> đúng"
     },
     {
-        "question": "Phần mềm tạo website trực tuyến bao gồm:",
-        "answers": [
-            "Notepad",
-            "Dreamweaver",
-            "Wix",
-            "4"
-        ],
-        "correct": "4"
+      "question": "Đâu là cách viết đúng để chèn một tệp CSS vào HTML?",
+      "options": [
+        "<style src=\"style.css\">",
+        "<link rel=\"stylesheet\" href=\"style.css\">",
+        "<css href=\"style.css\">",
+        "<stylesheet>style.css</stylesheet>"
+      ],
+      "answer": "<link rel=\"stylesheet\" href=\"style.css\">"
     },
     {
-        "question": "Phần mềm tạo website ngoại tuyến trực tuyến trên mạng không yêu cầu cài đặt trên máy tính:",
-        "answers": [
-            "Là phần mềm website ngoại tuyến được sử dụng trên mạng không yêu cầu cài đặt trên máy tính",
-            "Notepad",
-            "Dreamweaver",
-            "Mobirise"
-        ],
-        "correct": "Là phần mềm website ngoại tuyến được sử dụng trên mạng không yêu cầu cài đặt trên máy tính"
+      "question": "Thẻ nào được sử dụng để nhúng một đoạn mã JavaScript vào HTML?",
+      "options": [
+        "<js>",
+        "<javascript>",
+        "<script>",
+        "<code>"
+      ],
+      "answer": "<script>"
     },
     {
-        "question": "Phần mềm được sử dụng không trực tiếp trên mạng internet:",
-        "answers": [
-            "Mobirise",
-            "Wix",
-            "Weebly",
-            "Google Sites"
-        ],
-        "correct": "Mobirise"
+      "question": "Thuộc tính nào giúp thay đổi kiểu chữ trong CSS?",
+      "options": [
+        "font-family",
+        "font-style",
+        "text-type",
+        "text-decoration"
+      ],
+      "answer": "font-family"
     },
     {
-        "question": "Phần mềm nào sau đây không phải là website ngoại tuyến?",
-        "answers": [
-            "Notepad",
-            "Dreamweaver",
-            "Nicepage",
-            "Mobirise"
-        ],
-        "correct": "Nicepage"
+      "question": "Để tạo một bảng trong HTML, thẻ nào được sử dụng?",
+      "options": [
+        "<table>",
+        "<tr>",
+        "<td>",
+        "Cả <table>, <tr> và <td> đều đúng"
+      ],
+      "answer": "Cả <table>, <tr> và <td> đều đúng"
     },
     {
-        "question": "Mobirise là:",
-        "answers": [
-            "Phần mềm ngoại tuyến có phí",
-            "Phần mềm trực tuyến miễn phí",
-            "Phần mềm ngoại tuyến miễn phí",
-            "Phần mềm trực tuyến có phí"
-        ],
-        "correct": "Phần mềm ngoại tuyến có phí"
+      "question": "CSS viết tắt của cụm từ nào?",
+      "options": [
+        "Computer Style Sheet",
+        "Creative Style System",
+        "Cascading Style Sheet",
+        "Central Styling System"
+      ],
+      "answer": "Cascading Style Sheet"
     },
     {
-        "question": "Các trang web là tập tin được xây dựng bởi:",
-        "answers": [
-            "Ngôn ngữ CSS",
-            "Ngôn ngữ HTML",
-            "Ngôn ngữ JavaScript",
-            "Ngôn ngữ PHP"
-        ],
-        "correct": "Ngôn ngữ CSS"
+      "question": "Thẻ nào được sử dụng để tạo dòng ngắt trong HTML?",
+      "options": [
+        "<break>",
+        "<br>",
+        "<lb>",
+        "<newline>"
+      ],
+      "answer": "<br>"
     },
     {
-        "question": "Các trang web cơ bản có được viết bởi ngôn ngữ gì?",
-        "answers": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Python"
-        ],
-        "correct": "HTML"
+      "question": "Để căn giữa một phần tử theo chiều ngang trong CSS, thuộc tính nào được sử dụng?",
+      "options": [
+        "text-align",
+        "margin",
+        "padding",
+        "align-content"
+      ],
+      "answer": "margin"
     },
     {
-        "question": "Chọn phấy biểu đúng:",
-        "answers": [
-            "Mỗi trang web có thể có số lượng web khác nhau",
-            "Mỗi trang web chỉ có một nội dung",
-            "Mỗi trang web không cần ngôn ngữ",
-            "Mỗi trang web đều giống nhau"
-        ],
-        "correct": "Mỗi trang web có thể có số lượng web khác nhau"
+      "question": "Trong HTML, thẻ nào dùng để hiển thị hình ảnh?",
+      "options": [
+        "<img>",
+        "<image>",
+        "<pic>",
+        "<photo>"
+      ],
+      "answer": "<img>"
     },
     {
-        "question": "Những trang web chính của website là gì?",
-        "answers": [
-            "Trang chủ, trang chính, trang chi tiết",
-            "Trang chân, trang phụ, trang ẩn",
-            "Trang cuối, trang đầu, trang giữa",
-            "Trang tạm, trang cố định, trang động"
-        ],
-        "correct": "Trang chủ, trang chính, trang chi tiết"
+      "question": "Thẻ nào dùng để tạo một danh sách không có thứ tự?",
+      "options": [
+        "<ol>",
+        "<li>",
+        "<ul>",
+        "<list>"
+      ],
+      "answer": "<ul>"
     },
     {
-        "question": "Có vẻ bạn, mỗi website có máy trang web chính?",
-        "answers": [
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "correct": "4"
-    },
-    {
-        "question": "Trang web đặt tiên khi truy cập website được gọi là gì?",
-        "answers": [
-            "Trang phụ",
-            "Trang chủ",
-            "Trang chi tiết",
-            "Trang cuối"
-        ],
-        "correct": "Trang chủ"
-    },
-    {
-        "question": "Trang web chứa các nội dung chính của website được gọi là gì?",
-        "answers": [
-            "Trang chính",
-            "Trang phụ",
-            "Trang liên kết",
-            "Trang điều hướng"
-        ],
-        "correct": "Trang chính"
-    },
-    {
-        "question": "Chuyển mục có ý nghĩa gì?",
-        "answers": [
-            "Không thể chuyển mục",
-            "Chuyển mục là thay đổi ngôn ngữ",
-            "Chuyển mục là xóa nội dung",
-            "Có thể có chuyển mục"
-        ],
-        "correct": "Có thể có chuyển mục"
-    },
-    {
-        "question": "Thương hiệu kê các mục nội dung phụ của website:",
-        "answers": [
-            "Thanh chân trang",
-            "Thanh giữa trang",
-            "Thư mục liệt kê các mục chi tiết của website",
-            "Thanh bên phải"
-        ],
-        "correct": "Thư mục liệt kê các mục chi tiết của website"
-    },
-    {
-        "question": "Phật bịu nào sau đây là dụng chính của website:",
-        "answers": [
-            "Hiển thị hình ảnh",
-            "Mỗi mục nội dung sẽ liên kết với một hoặc nhiều trang Web",
-            "Lưu trữ dữ liệu",
-            "Tạo hiệu ứng âm thanh"
-        ],
-        "correct": "Mỗi mục nội dung sẽ liên kết với một hoặc nhiều trang Web"
+      "question": "Thuộc tính nào trong CSS giúp làm tròn góc của một phần tử?",
+      "options": [
+        "corner-radius",
+        "border-radius",
+        "round-edge",
+        "border-corner"
+      ],
+      "answer": "border-radius"
     }
-]
+  ]
+}
