@@ -46,6 +46,10 @@
       #next-btn:hover {
         background: #0056b3;
       }
+      #next-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
       ul {
         list-style: none;
         padding: 0;
@@ -61,6 +65,11 @@
       }
       li:hover {
         background: #e9ecef;
+      }
+      li.selected {
+        background: #007bff;
+        color: white;
+        border-color: #0056b3;
       }
       .correct {
         background: #28a745 !important;
@@ -89,6 +98,11 @@
         font-weight: bold;
         margin-left: 5px;
       }
+      #timer {
+        font-size: 16px;
+        color: #dc3545;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
@@ -99,8 +113,9 @@
 
     <div class="container" id="quiz-container" style="display: none">
       <h2 id="question-text"></h2>
+      <div id="timer"></div>
       <ul id="answers-list"></ul>
-      <button id="next-btn" onclick="nextQuestion()">Next</button>
+      <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
     </div>
 
     <div class="container" id="result-container"></div>
@@ -112,23 +127,33 @@
         answered = 0,
         startTime,
         timerInterval,
-        userAnswers = [];
+        userAnswers = [],
+        selectedAnswer = null,
+        timeLeft = 90;
 
       async function startQuiz() {
         try {
           let response = await fetch("questions.json");
           questions = await response.json();
+          // Loại bỏ "A.", "B.", "C.", "D." khỏi đáp án trong questions
+          questions = questions.map((q) => ({
+            ...q,
+            answers: q.answers.map((answer) =>
+              answer.replace(/^[A-D]\.\s*/, "")
+            ),
+            correct: q.correct.replace(/^[A-D]\.\s*/, ""),
+          }));
           questions = shuffleArray(questions);
           startTime = new Date().getTime();
           document.getElementById("start-container").style.display = "none";
           document.getElementById("quiz-container").style.display = "block";
-          nextQuestion();
+          loadQuestion();
         } catch (error) {
           alert("Không thể tải câu hỏi!");
         }
       }
 
-      function nextQuestion() {
+      function loadQuestion() {
         if (currentIndex >= questions.length) return endQuiz();
         clearTimeout(timerInterval);
 
@@ -136,6 +161,8 @@
         document.getElementById("question-text").innerText = q.question;
         let answersList = document.getElementById("answers-list");
         answersList.innerHTML = "";
+        selectedAnswer = null; // Reset đáp án đã chọn
+        document.getElementById("next-btn").disabled = true; // Vô hiệu hóa nút Next
 
         shuffleArray(q.answers).forEach((answer) => {
           let li = document.createElement("li");
@@ -144,25 +171,64 @@
           answersList.appendChild(li);
         });
 
-        timerInterval = setTimeout(() => nextQuestion(), 90 * 1000);
+        // Đặt lại thời gian và bắt đầu đếm ngược
+        timeLeft = 30; // 90 giây cho mỗi câu hỏi
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          updateTimerDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            nextQuestion(); // Tự động chuyển sang câu tiếp theo nếu hết thời gian
+          }
+        }, 1000);
+      }
+
+      function updateTimerDisplay() {
+        document.getElementById(
+          "timer"
+        ).innerText = `Thời gian còn lại: ${timeLeft} giây`;
       }
 
       function selectAnswer(userAnswer, correctAnswer) {
-        answered++;
-        userAnswers.push({
-          question: questions[currentIndex].question,
-          answers: questions[currentIndex].answers,
-          userAnswer,
-          correctAnswer,
-        });
+        let answersList = document.getElementById("answers-list");
+        let items = answersList.getElementsByTagName("li");
 
-        if (userAnswer === correctAnswer) score++;
+        // Xóa lớp selected khỏi tất cả các đáp án
+        for (let item of items) {
+          item.classList.remove("selected");
+        }
+
+        // Đánh dấu đáp án được chọn
+        let selectedItem = Array.from(items).find(
+          (item) => item.innerText === userAnswer
+        );
+        if (selectedItem) {
+          selectedItem.classList.add("selected");
+          selectedAnswer = userAnswer;
+          document.getElementById("next-btn").disabled = false; // Kích hoạt nút Next
+        }
+      }
+
+      function nextQuestion() {
+        if (!selectedAnswer && timeLeft > 0) return; // Không chuyển nếu chưa chọn đáp án và chưa hết thời gian
+        if (currentIndex >= questions.length) return endQuiz();
+
+        let q = questions[currentIndex];
+        if (selectedAnswer === q.correct) score++;
+        userAnswers.push({
+          question: q.question,
+          answers: q.answers,
+          userAnswer: selectedAnswer || "Không chọn",
+          correctAnswer: q.correct,
+        });
+        answered++;
         currentIndex++;
-        nextQuestion();
+        loadQuestion();
       }
 
       function endQuiz() {
-        clearTimeout(timerInterval);
+        clearInterval(timerInterval);
         document.getElementById("quiz-container").style.display = "none";
         document.getElementById("result-container").style.display = "block";
 
