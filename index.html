@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi Trắc Nghiệm</title>
+    <link rel="icon" href="image/testting2.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #e0e7ff, #f0f2f5);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        transition: background 0.3s ease;
+        font-family: 'Inter', sans-serif;
+      }
+      body.dark {
+        background: linear-gradient(135deg, #1e293b, #334155);
+        color: #e2e8f0;
+      }
+      .container {
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      .dark .container {
+        background: #1e293b;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+      .dark .bg-gray-100 {
+        background: #334155;
+      }
+      .dark .bg-gray-50 {
+        background: #2d3748;
+      }
+      .dark .text-gray-800 {
+        color: #e2e8f0;
+      }
+      .dark .text-indigo-600 {
+        color: #a5b4fc;
+      }
+      .dark .bg-green-100 {
+        background: #064e3b;
+      }
+      .dark .text-green-800 {
+        color: #6ee7b7;
+      }
+      .dark .bg-red-100 {
+        background: #7f1d1d;
+      }
+      .dark .text-red-800 {
+        color: #f87171;
+      }
+      .option {
+        transition: all 0.2s ease;
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+      }
+      .option:hover {
+        transform: scale(1.02);
+        background: #e5e7eb;
+      }
+      .option.selected {
+        background: #4f46e5;
+        color: white;
+        border-color: #4338ca;
+      }
+      .animate-slide-in {
+        animation: slideIn 0.5s ease-in-out;
+      }
+      @keyframes slideIn {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .progress-bar {
+        height: 6px;
+        background: #e5e7eb;
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .progress-bar-fill {
+        height: 100%;
+        background: #4f46e5;
+        transition: width 0.3s ease;
+      }
+      button {
+        transition: all 0.2s ease;
+      }
+      button:hover:not(:disabled) {
+        transform: scale(1.05);
+      }
+      #theme-toggle {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 10;
+      }
+      @media (max-width: 640px) {
+        .container {
+          padding: 16px;
+        }
+        h1 {
+          font-size: 1.75rem;
+        }
+        h2 {
+          font-size: 1.25rem;
+        }
+        button {
+          padding: 12px;
+          font-size: 0.875rem;
+        }
+        .option {
+          padding: 12px;
+          font-size: 0.875rem;
+        }
+        #result-container .grid {
+          grid-template-columns: 1fr;
+        }
+        #result-chart {
+          max-height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300">
+      🌙
+    </button>
+
+    <div id="start-container" class="container animate-slide-in">
+      <h1 class="text-3xl font-bold text-indigo-600 mb-4 text-center">Thi Trắc Nghiệm</h1>
+      <p class="text-lg mb-6 text-center">Điểm cao nhất: <span id="best-score">Chưa có</span></p>
+      <button id="start-btn" onclick="startQuiz()" class="w-full bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-300 text-lg">Bắt đầu</button>
+    </div>
+
+    <div id="quiz-container" class="container animate-slide-in" style="display: none">
+      <div class="progress-bar mb-4">
+        <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%"></div>
+      </div>
+      <p id="question-counter" class="text-lg font-medium mb-2 text-center"></p>
+      <h2 id="question-text" class="text-xl font-semibold text-gray-800 mb-6 text-center" role="heading" aria-level="2"></h2>
+      <div id="timer" class="text-lg font-medium text-red-500 mb-4 text-center" role="timer"></div>
+      <ul id="answers-list" class="space-y-3" role="listbox"></ul>
+      <button id="next-btn" onclick="nextQuestion()" disabled class="w-full mt-6 bg-indigo-600 text-white px-6 py-3 rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-indigo-700 transition duration-300" aria-disabled="true">Tiếp theo</button>
+    </div>
+
+    <div id="result-container" class="container animate-slide-in" style="display: none">
+      <h2 class="text-2xl font-bold text-indigo-600 mb-6 text-center">Kết Quả</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <canvas id="result-chart" class="w-full"></canvas>
+        </div>
+        <div class="space-y-4 text-center md:text-left">
+          <p class="text-lg"><strong>Điểm:</strong> <span id="total-points"></span>/10</p>
+          <p class="text-lg"><strong>Thời gian hoàn thành:</strong> <span id="time-taken"></span> giây</p>
+          <p class="text-lg"><strong>Tỉ lệ hoàn thành:</strong> <span id="completion-rate"></span>%</p>
+          <p class="text-lg"><strong>Tỉ lệ làm đúng:</strong> <span id="correct-rate"></span>%</p>
+        </div>
+      </div>
+      <h3 class="text-xl font-semibold mt-8 mb-4 text-center">Chi Tiết Câu Hỏi</h3>
+      <div id="question-details" class="space-y-6"></div>
+      <button onclick="location.reload()" class="w-full mt-8 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">Làm lại</button>
+    </div>
+
+    <script>
+      let questions = [],
+        currentIndex = 0,
+        score = 0,
+        answered = 0,
+        startTime,
+        timerInterval,
+        userAnswers = [],
+        selectedAnswer = null,
+        timeLeft = 30;
+      const jsConfetti = new JSConfetti();
+
+      // Load best score from local storage
+      const bestScoreElement = document.getElementById('best-score');
+      let bestScore = localStorage.getItem('bestScore') ? parseInt(localStorage.getItem('bestScore')) : 0;
+      bestScoreElement.innerText = bestScore ? `${bestScore}/10` : 'Chưa có';
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeToggle.innerText = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      });
+
+      async function startQuiz() {
+        try {
+          const cacheBuster = `t=${new Date().getTime()}`;
+          const response = await fetch(`questions.json?${cacheBuster}`, { cache: "no-store" });
+          if (!response.ok) throw new Error("Không thể tải dữ liệu câu hỏi. Mã lỗi: " + response.status);
+          questions = await response.json();
+          if (!questions || questions.length === 0) throw new Error("File câu hỏi rỗng hoặc không hợp lệ.");
+
+          questions = questions.map(q => ({
+            ...q,
+            answers: q.answers.map(answer => answer.replace(/^[A-D]\.\s*/, "")),
+            correct: q.correct.replace(/^[A-D]\.\s*/, ""),
+          }));
+          questions = shuffleArray(questions);
+
+          startTime = new Date().getTime();
+          document.getElementById("start-container").style.display = "none";
+          document.getElementById("quiz-container").style.display = "block";
+          loadQuestion();
+        } catch (error) {
+          alert("Lỗi khi tải câu hỏi: " + error.message + ". Vui lòng kiểm tra file questions.json hoặc kết nối mạng!");
+          console.error("Lỗi chi tiết:", error);
+        }
+      }
+
+      function loadQuestion() {
+        if (currentIndex >= questions.length) return endQuiz();
+        clearInterval(timerInterval);
+
+        let q = questions[currentIndex];
+        document.getElementById("question-text").innerText = q.question;
+        document.getElementById("question-counter").innerText = `Câu ${currentIndex + 1}/${questions.length}`;
+        let answersList = document.getElementById("answers-list");
+        answersList.innerHTML = "";
+        selectedAnswer = null;
+        document.getElementById("next-btn").disabled = true;
+        document.getElementById("next-btn").setAttribute("aria-disabled", "true");
+
+        // Update progress bar
+        const progress = ((currentIndex + 1) / questions.length) * 100;
+        document.getElementById("progress-bar-fill").style.width = `${progress}%`;
+
+        shuffleArray(q.answers).forEach((answer, index) => {
+          let li = document.createElement("li");
+          li.className = "option cursor-pointer";
+          li.innerText = answer;
+          li.setAttribute("role", "option");
+          li.setAttribute("aria-selected", "false");
+          li.onclick = () => selectAnswer(answer, q.correct, li);
+          answersList.appendChild(li);
+        });
+
+        timeLeft = 30;
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          updateTimerDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            nextQuestion();
+          }
+        }, 1000);
+      }
+
+      function updateTimerDisplay() {
+        document.getElementById("timer").innerText = `Thời gian còn lại: ${timeLeft} giây`;
+      }
+
+      function selectAnswer(userAnswer, correctAnswer, selectedItem) {
+        let answersList = document.getElementById("answers-list");
+        let items = answersList.getElementsByTagName("li");
+
+        for (let item of items) {
+          item.classList.remove("selected");
+          item.setAttribute("aria-selected", "false");
+        }
+
+        selectedItem.classList.add("selected");
+        selectedItem.setAttribute("aria-selected", "true");
+        selectedAnswer = userAnswer;
+        document.getElementById("next-btn").disabled = false;
+        document.getElementById("next-btn").setAttribute("aria-disabled", "false");
+      }
+
+      function nextQuestion() {
+        if (!selectedAnswer && timeLeft > 0) return;
+        if (currentIndex >= questions.length) return endQuiz();
+
+        let q = questions[currentIndex];
+        if (selectedAnswer === q.correct) score++;
+        userAnswers.push({
+          question: q.question,
+          answers: q.answers,
+          userAnswer: selectedAnswer || "Không chọn",
+          correctAnswer: q.correct,
+        });
+        answered++;
+        currentIndex++;
+        loadQuestion();
+      }
+
+      function endQuiz() {
+        clearInterval(timerInterval);
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("result-container").style.display = "block";
+
+        let endTime = new Date().getTime();
+        let timeTaken = Math.floor((endTime - startTime) / 1000);
+        let completionRate = Math.floor((answered / questions.length) * 100);
+        let correctRate = Math.floor((score / questions.length) * 100);
+        let totalPoints = Math.floor((score / questions.length) * 10);
+
+        // Save best score
+        if (totalPoints > bestScore) {
+          bestScore = totalPoints;
+          localStorage.setItem('bestScore', bestScore);
+        }
+
+        // Confetti for high score
+        if (totalPoints >= 8) {
+          jsConfetti.addConfetti({
+            confettiRadius: 6,
+            confettiNumber: 500,
+          });
+        }
+
+        document.getElementById("total-points").innerText = totalPoints;
+        document.getElementById("time-taken").innerText = timeTaken;
+        document.getElementById("completion-rate").innerText = completionRate;
+        document.getElementById("correct-rate").innerText = correctRate;
+
+        let ctx = document.getElementById("result-chart").getContext("2d");
+        new Chart(ctx, {
+          type: "pie",
+          data: {
+            labels: ["Đúng", "Sai"],
+            datasets: [{
+              data: [score, questions.length - score],
+              backgroundColor: ["#34D399", "#EF4444"],
+              borderColor: ["#fff", "#fff"],
+              borderWidth: 2,
+            }],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { position: "top" },
+              title: { display: true, text: "Tỉ lệ Đúng/Sai", font: { size: 18 } },
+            },
+          },
+        });
+
+        let questionDetails = document.getElementById("question-details");
+        userAnswers.forEach((item, index) => {
+          let div = document.createElement("div");
+          div.className = "bg-gray-50 p-4 rounded-lg";
+          div.innerHTML = `<p class="font-semibold text-lg mb-2">Câu ${index + 1}: ${item.question}</p>
+            <ul class="space-y-2">${item.answers.map(answer => {
+              let className = "p-3 rounded-lg";
+              let icon = "";
+              if (answer === item.correctAnswer) {
+                className += " bg-green-100 text-green-800";
+                icon = "✅";
+              }
+              if (answer === item.userAnswer && answer !== item.correctAnswer) {
+                className += " bg-red-100 text-red-800";
+                icon = "❌";
+              }
+              return `<li class="${className}">${answer} <span class="ml-2">${icon}</span></li>`;
+            }).join("")}</ul>`;
+          questionDetails.appendChild(div);
+        });
+      }
+
+      function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+      }
+    </script>
+  </body>
+</html>

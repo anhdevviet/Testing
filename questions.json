@@ -1,0 +1,31 @@
+[ {
+    "question": "HTML Là viết tắt của?",
+    "answers": [
+        "Hyper Text Markup Language",
+        "Hyper Transfer Markup Language",
+        "High Text Markup Language",
+        "Hyper Tool Markup Language"
+    ],
+    "correct": "Hyper Text Markup Language"
+},
+
+{
+    "question": "Website thường được tạo bởi ngôn ngữ lập trình nào?",
+    "answers": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP"
+    ],
+    "correct": "HTML"
+},
+{ "question": "em yeu ai?",
+    "answers": [
+        "anh tri",
+        "tri dep trai",
+        "pham van tri",
+        "tri pv"
+    ],
+    "correct": "pham van tri"
+}
+]
