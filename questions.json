@@ -1,203 +1,112 @@
 [
-    {
-      "question": "Choose the correct form: If she _____ earlier, she wouldn't have missed the bus.",
-      "answers": [
-        "left",
-        "had left",
-        "leaves",
-        "has left"
-      ],
-      "correct": "had left"
-    },
-    {
-      "question": "Identify the correct sentence:",
-      "answers": [
-        "He don't like coffee.",
-        "He doesn't likes coffee.",
-        "He doesn't like coffee.",
-        "He don't likes coffee."
-      ],
-      "correct": "He doesn't like coffee."
-    },
-    {
-      "question": "Select the word that best fits: She has a strong _____ in environmental issues.",
-      "answers": [
-        "interested",
-        "interest",
-        "interesting",
-        "interests"
-      ],
-      "correct": "interest"
-    },
-    {
-      "question": "Choose the correct passive voice: They will finish the project next week.",
-      "answers": [
-        "The project will be finished next week.",
-        "The project will finish next week.",
-        "The project is finished next week.",
-        "The project will be finishing next week."
-      ],
-      "correct": "The project will be finished next week."
-    },
-    {
-      "question": "Identify the synonym of 'rapid':",
-      "answers": [
-        "slow",
-        "quick",
-        "delayed",
-        "lethargic"
-      ],
-      "correct": "quick"
-    },
-    {
-      "question": "Choose the correct form: Neither the teacher nor the students _____ present.",
-      "answers": [
-        "was",
-        "were",
-        "is",
-        "be"
-      ],
-      "correct": "were"
-    },
-    {
-      "question": "Select the correct relative pronoun: The book _____ I borrowed was fascinating.",
-      "answers": [
-        "who",
-        "whom",
-        "which",
-        "whose"
-      ],
-      "correct": "which"
-    },
-    {
-      "question": "Choose the correct preposition: She is good _____ mathematics.",
-      "answers": [
-        "in",
-        "at",
-        "on",
-        "with"
-      ],
-      "correct": "at"
-    },
-    {
-      "question": "Identify the correct sentence:",
-      "answers": [
-        "I have visited Paris last year.",
-        "I visited Paris last year.",
-        "I have been visiting Paris last year.",
-        "I was visiting Paris last year."
-      ],
-      "correct": "I visited Paris last year."
-    },
-    {
-      "question": "Select the antonym of 'generous':",
-      "answers": [
-        "kind",
-        "stingy",
-        "benevolent",
-        "charitable"
-      ],
-      "correct": "stingy"
-    },
-    {
-      "question": "Choose the correct conditional: If I were you, I _____ take the job offer.",
-      "answers": [
-        "will",
-        "would",
-        "can",
-        "shall"
-      ],
-      "correct": "would"
-    },
-    {
-      "question": "Identify the correct sentence:",
-      "answers": [
-        "She said me to go.",
-        "She told me to go.",
-        "She said me go.",
-        "She told to me go."
-      ],
-      "correct": "She told me to go."
-    },
-    {
-      "question": "Select the correct form: The movie was _____ than I expected.",
-      "answers": [
-        "more interesting",
-        "interestinger",
-        "most interesting",
-        "interestingest"
-      ],
-      "correct": "more interesting"
-    },
-    {
-      "question": "Choose the correct article: She bought _____ umbrella.",
-      "answers": [
-        "a",
-        "an",
-        "the",
-        "no article needed"
-      ],
-      "correct": "an"
-    },
-    {
-      "question": "Identify the correct sentence:",
-      "answers": [
-        "Despite of the rain, we went out.",
-        "In spite the rain, we went out.",
-        "Despite the rain, we went out.",
-        "Although of the rain, we went out."
-      ],
-      "correct": "Despite the rain, we went out."
-    },
-    {
-      "question": "Select the correct verb form: By the time he arrived, we _____ dinner.",
-      "answers": [
-        "have had",
-        "had had",
-        "have",
-        "has had"
-      ],
-      "correct": "had had"
-    },
-    {
-      "question": "Choose the correct word: She is the _____ of the two sisters.",
-      "answers": [
-        "tallest",
-        "taller",
-        "more tall",
-        "most tall"
-      ],
-      "correct": "taller"
-    },
-    {
-      "question": "Identify the correct sentence:",
-      "answers": [
-        "I look forward to meet you.",
-        "I look forward to meeting you.",
-        "I look forward meeting you.",
-        "I look forward meet you."
-      ],
-      "correct": "I look forward to meeting you."
-    },
-    {
-      "question": "Select the correct form: He suggested that she _____ earlier.",
-      "answers": [
-        "arrives",
-        "arrived",
-        "arrive",
-        "will arrive"
-      ],
-      "correct": "arrive"
-    },
-    {
-      "question": "Choose the correct word: The news _____ surprising.",
-      "answers": [
-        "are",
-        "is",
-        "were",
-        "be"
-      ],
-      "correct": "is"
-    }
-  ]
-  
+  {
+    "question": "Many students often lose marks __________ they do not read the exam questions carefully.",
+    "answers": ["because", "despite", "though", "therefore"],
+    "correct": "because"
+  },
+  {
+    "question": "Nothing is worse __________ being stuck in a traffic jam.",
+    "answers": ["than", "though", "because", "on"],
+    "correct": "than"
+  },
+  {
+    "question": "Stevenson is an architect __________ designs have won international praise.",
+    "answers": ["whose", "who", "which", "that"],
+    "correct": "who"
+  },
+  {
+    "question": "They didn’t win the game __________ they played very well.",
+    "answers": ["though", "because", "therefore", "despite"],
+    "correct": "though"
+  },
+  {
+    "question": "Do you think the people in this village can live __________ selling silk scarves as souvenirs?",
+    "answers": ["on", "by", "with", "in"],
+    "correct": "on"
+  },
+  {
+    "question": "If Angela had more free time, she __________ join the badminton club.",
+    "answers": ["would", "could", "should", "might"],
+    "correct": "would"
+  },
+  {
+    "question": "Match: If you want to take a space trip, ___",
+    "answers": [
+      "you must be in excellent physical condition.",
+      "he was not promoted.",
+      "to spell better.",
+      "who travelled into space in 1961."
+    ],
+    "correct": "you must be in excellent physical condition."
+  },
+  {
+    "question": "Match: In spite of making a lot of effort at work, ___",
+    "answers": [
+      "he was not promoted.",
+      "you must be in excellent physical condition.",
+      "didn’t use to transport rice home on trucks.",
+      "listen to English speakers and try to imitate them."
+    ],
+    "correct": "he was not promoted."
+  },
+  {
+    "question": "My sister usually (play) __________ sports in the morning.",
+    "answers": ["plays", "played", "is playing", "has played"],
+    "correct": "plays"
+  },
+  {
+    "question": "There (be) __________ a big change in the roles of men and women at home in Vietnam for the past few decades.",
+    "answers": ["has been", "was", "is", "had been"],
+    "correct": "has been"
+  },
+  {
+    "question": "I suggest (recycle) __________ things such as bags, cans, and bottles.",
+    "answers": ["recycling", "to recycle", "recycle", "recycled"],
+    "correct": "recycling"
+  },
+  {
+    "question": "She tried hard (cooperate) __________ with others in the team to finish the work.",
+    "answers": ["to cooperate", "cooperating", "cooperate", "cooperated"],
+    "correct": "to cooperate"
+  },
+  {
+    "question": "In a big city, school children in their uniforms can (see) __________ on the pavement, walking or waiting for buses.",
+    "answers": ["be seen", "see", "being seen", "saw"],
+    "correct": "be seen"
+  },
+  {
+    "question": "You will have to train your voice harder if you want to become a (profession) __________ singer.",
+    "answers": ["professional", "professor", "profession", "professionally"],
+    "correct": "professional"
+  },
+  {
+    "question": "The factory was (beauty) __________ decorated to welcome the prime minister’s visit.",
+    "answers": ["beautifully", "beauty", "beautiful", "beautified"],
+    "correct": "beautifully"
+  },
+  {
+    "question": "Astronauts experience (weigh) __________ when they are in space.",
+    "answers": ["weightlessness", "weight", "weigh", "weightless"],
+    "correct": "weightlessness"
+  },
+  {
+    "question": "Error correction: My mother has already prepared dinner when I came home last night.",
+    "answers": ["has → had", "already → just", "prepared → prepare", "came → come"],
+    "correct": "has → had"
+  },
+  {
+    "question": "Error correction: London includes a wide range of peoples, cultures, and religions than many other places.",
+    "answers": ["wide → wider", "includes → include", "places → place", "many → much"],
+    "correct": "wide → wider"
+  },
+  {
+    "question": "Reading comprehension: English is spoken as an official language in over 60 countries.",
+    "answers": ["TRUE", "FALSE"],
+    "correct": "TRUE"
+  },
+  {
+    "question": "Reading comprehension: The word umbrella in English comes from the Portuguese word marmelada.",
+    "answers": ["TRUE", "FALSE"],
+    "correct": "FALSE"
+  }
+]
